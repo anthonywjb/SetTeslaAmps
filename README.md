@@ -13,6 +13,8 @@ Copy the contents of the "Tesla" folder in this repo to ~/Tesla. Another folder 
 
 In your ~/Tesla folder, edit the "control.txt" file so that the first line reads the number of amps and the second line contains your Tesla account's email address.
 
+Run the command "python AmpTimer.py" manually to initialise the cache.json file in your ~/Tesla folder. This needs to be done with a screen as it will run a browser. If you have to do it headless, run it on another machine and copy the cache.json file into this folder.
+
 Configure your crontab with to execute the following commands:
 
 */1 21-23 * * * youruser cd ~/Tesla && python ~/Tesla/AmpTimer.py >> ~/Tesla/AmpResults.txt
@@ -51,3 +53,5 @@ TeslaPy
 2: Write results to SQL table instead of text file. This will allow for integration with energy tariff monitoring in my Octopus Energy smart meter data logger.
 
 3: Create an empty results file with headers if it doesn't exist
+
+4: Create an initialisation script that checks login and creates the cache.json file
