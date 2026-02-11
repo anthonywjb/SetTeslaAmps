@@ -1,0 +1,1 @@
+DateTime,TargetAmps,ChargingAmps,Latitude,Longitude,ChargerVoltage,ChargeRate,BatteryLevel,BatteryRange,EstBatteryRange,ChargingState
