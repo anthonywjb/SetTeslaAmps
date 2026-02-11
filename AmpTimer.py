@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 
 try:
-    controlFile = open(Path('~/PythonCode/Tesla/control.txt').expanduser())
+    controlFile = open(Path('~/Tesla/control.txt').expanduser())
 except FileNotFoundError:
     sys.exit(1)
 
