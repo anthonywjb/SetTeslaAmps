@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 
 try:
-    controlFile = open(Path('~/Tesla/control.txt').expanduser())
+    controlFile = open(Path('~/PythonCode/Tesla/control.txt').expanduser())
 except FileNotFoundError:
     sys.exit(1)
 
@@ -19,7 +19,7 @@ with teslapy.Tesla(accountName) as tesla:
     myVehicle = tesla.vehicle_list()[0]  # Get the first vehicle in your account. If you have more than one Tesla, lucky you! Make another installation of this in a different folder, and change the index number from 0 to 1,2,3..99 etc.
     summary = myVehicle.get_vehicle_summary()
 
-    # If you only want to don't want to force the change when the car is offline or asleep, then uncomment the next two lines.
+    # If you don't want to force the change when the car is offline or asleep, then uncomment the next two lines.
     #if summary['state'] == "offline" or summary['state'] == "asleep":
         #sys.exit(1)
 
