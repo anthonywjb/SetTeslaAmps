@@ -54,5 +54,4 @@ with teslapy.Tesla(accountName) as tesla:
 
     if chargingState == 'Complete' or (chargingState == 'Stopped' and batteryLevel == 100):
         #Delete the control file to stop the car waking up every minute after a charge has been completed
-        Path(controlFilePath).unlink()
-
+        Path(controlFilePath).unlink(missing_ok=True)
