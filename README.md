@@ -26,6 +26,7 @@ Run the command "python AmpTimer.py" manually to initialise the cache.json file 
 Configure your crontab to execute the following commands:
 
 */1 21-23 * * * youruser cd ~/SetTeslaAmps && python ~/SetTeslaAmps/AmpTimer.py >> ~/SetTeslaAmps/AmpResults.txt
+
 */1 00-08 * * * youruser cd ~/SetTeslaAmps && python ~/SetTeslaAmps/AmpTimer.py >> ~/SetTeslaAmps/AmpResults.txt
 
 The two lines above will execute the python code every minute between 9pm and midnight, and then from midnight until 8:59am. Adjust accordingly, but these suit my own energy tariff.
